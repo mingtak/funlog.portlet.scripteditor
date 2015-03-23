@@ -29,17 +29,9 @@ class IScriptEditor(IPortletDataProvider):
         required=True,
     )
 
-    description = schema.Text(
-        title=_(u"Source"),
-        description=_(u"The script source."),
-        min_length=100,
-        max_length=200,
-        required=True,
-    )
-
-    script = schema.Text(
-        title=_(u"Script"),
-        description=_(u"Fill in your script code."),
+    videoUrl = schema.URI(
+        title=_(u"Video url"),
+        description=_(u"Fill youtube video url."),
         required=True,
     )
 
@@ -70,18 +62,16 @@ class Assignment(base.Assignment):
     # def __init__(self, some_field=u""):
     #    self.some_field = some_field
 
-    def __init__(self, title, source, script):
-        self.source = title
-        self.source = source
-        self.script = script
-
+    def __init__(self, title, videoUrl):
+        self._title = title
+        self.videoUrl = videoUrl
 
     @property
     def title(self):
         """This property is used to give the title of the portlet in the
         "manage portlets" screen.
         """
-        return _(u"Script editor")
+        return _(u"Youtube video")
 
 
 class Renderer(base.Renderer):

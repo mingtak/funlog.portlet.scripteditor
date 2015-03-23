@@ -1,20 +1,6 @@
-<dl class="portlet portletScriptEditor"
+<div class="portlet portletScriptEditor"
     i18n:domain="funlog.portlet.scripteditor">
-
-    <dt class="portletHeader">
-        <span class="portletTopLeft"></span>
-        Header
-        <span class="portletTopRight"></span>
-    </dt>
-
-    <dd class="portletItem odd">
-        Body text
-    </dd>
-
-    <dd class="portletFooter">
-        <span class="portletBottomLeft"></span>
-        Footer
-        <span class="portletBottomRight"></span>
-    </dd>
-
-</dl>
+<h3 tal:content="python:view.data._title" i18n:translate=""></h3>
+<div tal:content="structure view/data/videoUrl" />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C7wRb9adQUc?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>

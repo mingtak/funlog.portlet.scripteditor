@@ -9,9 +9,9 @@
 
     <genericsetup:registerProfile
        name="default"
-       title="Script editor"
+       title="Youtube video"
        directory="profiles/default"
-       description="Enabled script editor"
+       description="Enabled youtube video"
        provides="Products.GenericSetup.interfaces.EXTENSION"
        />
 
@@ -27,7 +27,7 @@
          interface=".scripteditor.IScriptEditor"
          assignment=".scripteditor.Assignment"
          view_permission="zope2.View"
-         edit_permission="cmf.ManagePortal"
+         edit_permission="funlog.isMember"
          renderer=".scripteditor.Renderer"
          addview=".scripteditor.AddForm"
          editview=".scripteditor.EditForm"
